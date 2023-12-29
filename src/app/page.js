@@ -4,7 +4,7 @@ import Image from 'next/image';
 import axios from 'axios';
 import SearchForm from './components/SearchForm';
 import Result from './components/Result';
-import Spinner from './components/Spinner';
+
 
 
 const page = () => {
