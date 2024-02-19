@@ -10,7 +10,7 @@ import Result from './components/Result';
 const page = () => {
 
   
-  const [city, setcity] = useState("nagpur");
+  const [city, setcity] = useState("");
   const [weather, setweather] = useState({})
   const [loading, setloading] = useState(false)
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.NEXT_PUBLIC_KEY}&units=metric`
@@ -25,9 +25,7 @@ const page = () => {
     setcity("")
     setloading(false)
   }
-  useEffect(() => {
-    fetchData();
-  }, [])
+
   
 
   if(loading){
