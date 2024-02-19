@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 import axios from 'axios';
 import SearchForm from './components/SearchForm';
@@ -25,6 +25,10 @@ const page = () => {
     setcity("")
     setloading(false)
   }
+  useEffect(() => {
+    fetchData();
+  }, [])
+  
 
   if(loading){
     return <Spinner/>
